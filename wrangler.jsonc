@@ -1,0 +1,8 @@
+
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "oracul-lunar-api",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-12",
+  "workers_dev": true
+}
