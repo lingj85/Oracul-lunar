@@ -69,7 +69,7 @@ async function interpret(){
  const btn=$("readBtn");btn.disabled=true;btn.textContent="Consultando la IA…";
  $("pickStatus").textContent="La IA está preparando tu interpretación. Espera un momento…";
  try{
-  const response=await fetch("https://workers-playground-rapid-grass-dc2a.vzv5b726nn.workers.dev/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question,cards:chosen.map((c,i)=>({name:c.name,theme:c.theme,position:positions[i][0],positionMeaning:positions[i][1]}))})});
+  const response=await fetch("https://oracul-lunar-api.vzv5b726nn.workers.dev/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question,cards:chosen.map((c,i)=>({name:c.name,theme:c.theme,position:positions[i][0],positionMeaning:positions[i][1]}))})});
   const data=await response.json().catch(()=>({}));
   if(!response.ok)throw new Error(data.error||"No se pudo obtener la interpretación.");
   const aiText=String(data.interpretation||"").trim();
