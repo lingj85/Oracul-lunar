@@ -1,0 +1,14 @@
+{
+  "name": "oraculo-lunar-ia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Oráculo Lunar: tarot de 78 cartas con interpretación IA y clave protegida en servidor.",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@google/genai": "^1.11.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1"
+  }
+}
